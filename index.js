@@ -43,7 +43,7 @@ app.use(cookieParser());
 
 // CORS configuration
 const allowedOrigins = [
-  "http://localhost:5173",
+  "http://13.127.177.102",
   "http://localhost:3000",
   "http://localhost:7000",
 ];
