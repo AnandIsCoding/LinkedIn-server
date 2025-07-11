@@ -1,14 +1,16 @@
 import dotenv from "dotenv";
 import { Server } from "socket.io";
 dotenv.config();
+
 const initializeSocket = (server) => {
-  // ✅ Initialize the Socket.IO server
   const io = new Server(server, {
+    path: "/server/socket.io", // ✅ Must match NGINX and frontend
     cors: {
       origin: [
         "http://localhost:5173",
         "http://localhost:3000",
-        process.env.webSocketUrl,
+        "http://13.201.223.117", // ✅ Direct IP used in production
+        process.env.webSocketUrl, // ✅ Optional
       ],
       methods: ["GET", "POST"],
       credentials: true,
@@ -16,16 +18,15 @@ const initializeSocket = (server) => {
   });
 
   io.on("connection", (socket) => {
-    // handle events
-    console.log("Connection established");
-    // new conversation
+    console.log("✅ Connection established with", socket.id);
+
     socket.on("joinConversation", (conversationId) => {
-      console.log(`User joined for conversationId --->> ${conversationId}`);
+      console.log(`User joined conversation ${conversationId}`);
       socket.join(conversationId);
     });
-    // send message
+
     socket.on("sendMessage", (conversationId, messageDetails) => {
-      console.log("Message sent");
+      console.log("📨 Message sent");
       io.to(conversationId).emit("receiveMessage", messageDetails);
     });
   });
