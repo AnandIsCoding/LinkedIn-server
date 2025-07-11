@@ -116,12 +116,12 @@ const userRegistrationSuccessEmail = (name) => {
           </ul>
         </div>
 
-        <a class="cta"  href="https://yourdomain.com/profile">Complete My Profile</a>
+        <a class="cta"  href="https://devlinked.site">Complete My Profile</a>
       </div>
 
       <div class="footer">
         Need help? Reach us at 
-        <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>
+        <a href="mailto:support@yourdomain.com">support@devlinked.site/</a>
       </div>
     </div>
   </body>
