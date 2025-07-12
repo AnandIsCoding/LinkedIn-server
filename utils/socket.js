@@ -10,7 +10,6 @@ const initializeSocket = (server) => {
         "http://localhost:5173",
         "http://localhost:3000",
         "http://13.201.223.117", // ✅ Direct IP used in production
-        process.env.webSocketUrl, // ✅ Optional
         "https://devlinked.site",
         "https://www.devlinked.site"
       ],

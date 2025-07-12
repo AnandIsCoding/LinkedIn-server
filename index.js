@@ -51,14 +51,18 @@ const allowedOrigins = [
 ];
 const corsOptions = {
   origin: (origin, callback) => {
+    console.log("🔍 Request Origin:", origin);
     if (allowedOrigins.includes(origin) || !origin) {
+      console.log("✅ Allowed by CORS:", origin);
       callback(null, true);
     } else {
+      console.log("❌ Blocked by CORS:", origin);
       callback(new Error("Not allowed by CORS"));
     }
   },
   credentials: true,
 };
+
 app.use(cors(corsOptions));
 
 app.use("/api/v1/user/auth", authRouter); //     /api/v1/user/auth/register
