@@ -50,18 +50,16 @@ const allowedOrigins = [
    "https://www.devlinked.site"
 ];
 const corsOptions = {
-  origin: (origin, callback) => {
-    console.log("🔍 Request Origin:", origin);
-    if (allowedOrigins.includes(origin) || !origin) {
-      console.log("✅ Allowed by CORS:", origin);
-      callback(null, true);
-    } else {
-      console.log("❌ Blocked by CORS:", origin);
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
+  origin: [
+    "http://13.201.223.117",
+    "http://localhost:3000",
+    "http://localhost:7000",
+    "https://devlinked.site",
+    "https://www.devlinked.site"
+  ],
   credentials: true,
 };
+
 
 app.use(cors(corsOptions));
 
