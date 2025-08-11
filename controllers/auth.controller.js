@@ -354,7 +354,7 @@ export const registerWithGoogleController = async (req, res) => {
       if (!userExists) {
         await mailSender(
           user.email,
-          "Welcome to LinkedSphere 🎉",
+          "Welcome to DevLinked 🎉",
           userRegistrationSuccessEmail(user.fullName)
         );
       }
