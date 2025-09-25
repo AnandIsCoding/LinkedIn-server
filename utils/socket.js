@@ -9,10 +9,10 @@ const initializeSocket = (server) => {
       origin: [
         "http://localhost:5173",
         "http://localhost:3000",
-        "http://13.201.119.90", // ✅ Direct IP used in production
+        "http://13.235.48.255", // ✅ Direct IP used in production
         "https://devlinked.site",
         "https://www.devlinked.site",
-        "13.201.119.90"
+        "13.235.48.255"
       ],
       methods: ["GET", "POST"],
       credentials: true,
