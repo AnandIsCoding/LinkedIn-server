@@ -48,18 +48,19 @@ const allowedOrigins = [
   "http://localhost:7000",
   "https://devlinked.site",
    "https://www.devlinked.site",
-   "13.235.48.255",
-   "http://13.127.251.65",
-   "13.127.251.65"
+   "13.234.67.73",
+   "http://13.234.67.73",
+   "13.234.67.73",
+   "http://localhost:5173"
 ];
 const corsOptions = {
   origin: [
-    "http://13.235.48.255",
+    "http://13.234.67.73",
     "http://localhost:3000",
     "http://localhost:7000",
     "https://devlinked.site",
     "https://www.devlinked.site",
-    "13.235.48.255"
+    "13.234.67.73"
   ],
   credentials: true,
 };
