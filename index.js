@@ -43,24 +43,24 @@ app.use(cookieParser());
 
 // CORS configuration
 const allowedOrigins = [
-  "http://13.235.48.255",
+  "http://15.206.178.48",
   "http://localhost:3000",
   "http://localhost:7000",
   "https://devlinked.site",
    "https://www.devlinked.site",
-   "13.234.67.73",
-   "http://13.234.67.73",
-   "13.234.67.73",
+   "15.206.178.48",
+   "http://15.206.178.48",
+   "15.206.178.48",
    "http://localhost:5173"
 ];
 const corsOptions = {
   origin: [
-    "http://13.234.67.73",
+    "http://15.206.178.48",
     "http://localhost:3000",
     "http://localhost:7000",
     "https://devlinked.site",
     "https://www.devlinked.site",
-    "13.234.67.73"
+    "15.206.178.48"
   ],
   credentials: true,
 };
